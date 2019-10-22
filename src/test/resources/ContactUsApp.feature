@@ -13,6 +13,7 @@ Feature: Automation Practice App  Test
   And user types a "<message>" in the message box
   Then user click the send button
   Then user confirm message was sent
+  And user closes the browser
   
   Examples:
   | email                    | orderReference | message                         |

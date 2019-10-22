@@ -17,6 +17,7 @@ Feature: Item App Test
     And user confirms seeing shopping cart summary
     And user clicks on the negative button under the quantity section
     Then user verify a message displaying shopping cart is empty
+    And user closes the browser
 
     Examples: 
       | clothing |
