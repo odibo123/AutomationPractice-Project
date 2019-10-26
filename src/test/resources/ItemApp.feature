@@ -2,9 +2,9 @@ Feature: Item App Test
 
   Scenario Outline: To test that user can add an item to the cart and remove the same
     Given user opens the browser
-    Then user is on Home Page
+    And user is on Home Page
     And user sees a Logo banner
-    And user click on search input box
+    When user click on search input box
     And user search for "<clothing>" in the search input box
     When user clicks on Search on search box
     Then user chooses an item displaying image and title and price

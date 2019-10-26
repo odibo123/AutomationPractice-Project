@@ -75,5 +75,9 @@ String messageConfirmed	=contactUsPage.verify_message_from_team();
 System.out.println(messageConfirmed);
 Assert.assertEquals("Your message has been successfully sent to our team.", messageConfirmed);
 }
+@Then("^user closes the browser$")
+public void user_closes_the_browser() throws Throwable {
+    driver.close();
+}
 
 }

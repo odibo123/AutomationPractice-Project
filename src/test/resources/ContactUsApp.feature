@@ -2,7 +2,7 @@ Feature: Automation Practice App  Test
 
   Scenario Outline: To check that user can send a message to Customer Service
   Given user opens the browser
-  Then user is on Home Page
+  And user is on Home Page
   And user sees a Logo banner
   When user click on Contact us link
   Then user validate Contact us Page
