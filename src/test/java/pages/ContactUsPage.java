@@ -43,9 +43,10 @@ public class ContactUsPage extends TestBase {
 		dropdown.selectByIndex(1);
 		
 	}
-	public void I_type_my_email_Address(String email){
-		EmailAddressTxtField.sendKeys(email);
-		
+//create a random email
+	public void type_my_email(){
+		     random = 100 + (int) (Math.random() * ((1000 - 1) + 1));
+			 EmailAddressTxtField.sendKeys("mike" + random + "@gmail.com");
 	}
 	public void I_enter_quanitity_on_order_reference(String orderReference){
 		Order_Reference_Txt_Field.sendKeys(orderReference);

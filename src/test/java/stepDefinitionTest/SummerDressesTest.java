@@ -1,13 +1,19 @@
 package stepDefinitionTest;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
 import base.TestBase;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import pages.HomePage;
 
-public class ChangePriceStepDef extends TestBase {
+public class SummerDressesTest extends TestBase {
 	 HomePage  homePage= new  HomePage();
 
 
@@ -31,6 +37,15 @@ public void user_changes_the_price_range_from_$_to_$(int arg1, int arg2) throws 
 	//homePage.change_price_range();
 	homePage.change_further_price_range();
 }
+@Then("^user verify search results are updated$")
+public void user_verify_search_results_are_updated() throws Throwable {
+   
+
+    File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    FileUtils.copyFile(src, new File("C:\\eclipse\\Illumination\\AutomationPractice.com\\ScreenShots\\Searchresultsloading.jpeg"));
+    System.out.println("Bug Found - Search Results still loading");
+}
+
 
 
 }

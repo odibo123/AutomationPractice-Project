@@ -18,8 +18,7 @@ public class HomePage extends TestBase{
 	public HomePage(){
 		PageFactory.initElements(driver, this);
 	}
-	
-	//  All Objects found are declared 
+		//  All Objects found are declared 
 	
 	@FindBy(how=How.LINK_TEXT,using = "Sign in")
 	 WebElement SignInlink;
@@ -28,10 +27,7 @@ public class HomePage extends TestBase{
 	 WebElement LogoLabel;
 	
 	@FindBy(how=How.XPATH,using = "//*[@id='contact-link']/a")
-	 WebElement ContactusLink;
-	
-	//methods or actions
-	
+	 WebElement ContactusLink;	
 	public void click_SignInLink(){
 		 SignInlink.click();		
 	}
@@ -40,9 +36,6 @@ public class HomePage extends TestBase{
 	
 	@FindBy(how=How.NAME, using = "submit_search")
 	WebElement SearchIconBox;
-	
-	
-	
 	
 	@FindBy(how=How.XPATH, using = "//*[@id='block_top_menu']/ul/li[1]/a")
 	WebElement  WomenLink;
@@ -86,12 +79,11 @@ public class HomePage extends TestBase{
 	
 	Dimension dim=	PriceRangeSlider1.getSize();
 	int x =dim.getWidth();
-	Actions action = new Actions(driver);
-	action.clickAndHold(PriceRangeSlider1).moveByOffset(0, 0).release().build().perform();
-		
-		
-		
-		
+	//System.out.println(x);
+	
+	     Actions action = new Actions(driver);
+	     action.clickAndHold(PriceRangeSlider1).moveByOffset(0, 0).release().build().perform();
+			
 	}
 	
 	public void change_further_price_range() throws InterruptedException{
@@ -99,8 +91,7 @@ public class HomePage extends TestBase{
      int y=	dime.getWidth();
 		Actions actions = new Actions(driver);
 		actions .clickAndHold(PriceRangeSlder2).moveByOffset(-183, 0).release().build().perform();
-		
-		
+			
 	}
 	}
 

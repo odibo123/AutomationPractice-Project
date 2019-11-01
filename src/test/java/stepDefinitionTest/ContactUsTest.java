@@ -37,11 +37,18 @@ public class ContactUsTest extends TestBase{
 		contactUsPage.I_Select_Customer_Service_From_SubjectHeadingDropdown();
 	}
 
-	@Then("^user enter \"([^\"]*)\" address$")
+/*	@Then("^user enter \"([^\"]*)\" address$")
 	public void user_enter_address(String email) throws Throwable {
 		ContactUsPage contactUsPage= PageFactory.initElements(driver, ContactUsPage.class); 
 		contactUsPage.I_type_my_email_Address(email);
+	}*/
+	
+	@Then("^user enter email address$")
+	public void user_enter_email_address() throws Throwable {
+		ContactUsPage contactUsPage= PageFactory.initElements(driver, ContactUsPage.class); 
+		contactUsPage.type_my_email();
 	}
+
 
 	@Then("^user enter quantity in   \"([^\"]*)\"$")
 	public void user_enter_quantity_in(String orderReference) throws Throwable {

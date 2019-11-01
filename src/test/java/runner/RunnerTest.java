@@ -12,8 +12,6 @@ import cucumber.api.junit.Cucumber;
 		strict = false,          //check if the steps are in my step definition file
         monochrome = true,       //display the console in a proper readable format
         glue = {"stepDefinitionTest"}       //path of my step definition ..where test code is
-		
-		
 		         )
 public class RunnerTest {
 
